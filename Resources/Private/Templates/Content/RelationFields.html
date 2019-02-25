@@ -1,0 +1,17 @@
+<f:layout name="Default" />
+
+<f:section name="Configuration">
+    <flux:form id="relationfields" label="Test: Relation fields" description="Test of relation fields" extensionName="FluidTYPO3.TestProviderExtension">
+        <flux:field.multiRelation table="pages" size="10" maxItems="10" name="relationWithSuggest">
+            <flux:wizard.suggest />
+        </flux:field.multiRelation>
+    </flux:form>
+</f:section>
+
+<f:section name="Preview">
+    Demo element showing usage of relation field types
+</f:section>
+
+<f:section name="Main">
+
+</f:section>

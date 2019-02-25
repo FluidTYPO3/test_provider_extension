@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" product-name="testing" date="2016-10-19T16:04:15-04:00">
+		<header/>
+		<body>
+			<trans-unit id="flux.newContentWizard.fluxContent">
+				<source>Flux special elements</source>
+			</trans-unit>
+			<trans-unit id="flux.systime_elements">
+				<source>Systime elements</source>
+			</trans-unit>
+			<trans-unit id="flux.standard">
+				<source>Example page</source>
+			</trans-unit>
+			<trans-unit id="flux.standard.description">
+				<source>Description can be entered in LLL file locallang.xlf of extension test</source>
+			</trans-unit>
+			<trans-unit id="flux.boomba">
+				<source>Boomba</source>
+			</trans-unit>
+			<trans-unit id="flux.boomba.description">
+				<source>Prueba de balla</source>
+			</trans-unit>
+			<trans-unit id="flux.container">
+				<source>Content wrap/container</source>
+			</trans-unit>
+			<trans-unit id="flux.container.description">
+				<source>Adds a logical content grouping (with background color etc.)</source>
+			</trans-unit>
+			<trans-unit id="flux.container.fields.settings.displayType">
+				<source>Display type / style</source>
+			</trans-unit>
+			<trans-unit id="flux.columns">
+				<source>Column splitter</source>
+			</trans-unit>
+			<trans-unit id="flux.columns.description">
+				<source>Column splitter (50/50, 33/66, 66/33)</source>
+			</trans-unit>
+			<trans-unit id="flux.columns.fields.settings.distribution">
+				<source>Distribution / layout</source>
+			</trans-unit>
+			<trans-unit id="flux.splitters.columns.left">
+				<source>Left content</source>
+			</trans-unit>
+			<trans-unit id="flux.splitters.columns.right">
+				<source>Right content</source>
+			</trans-unit>
+			<trans-unit id="flux.frames.columns.content">
+				<source>Container contents</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,24 @@
+plugin.tx_testproviderextension {
+	view {
+     	templateRootPaths.0 = {$plugin.tx_testproviderextension.view.templateRootPaths.0}
+		partialRootPaths.0 = {$plugin.tx_testproviderextension.view.partialRootPaths.0}
+		partialRootPaths.20 = {$plugin.tx_testproviderextension.view.partialRootPaths.0}ThirdPartials/
+		partialRootPaths.10 = {$plugin.tx_testproviderextension.view.partialRootPaths.0}OtherPartials/
+		layoutRootPaths.0 = {$plugin.tx_testproviderextension.view.layoutRootPaths.0}
+		widget.TYPO3\CMS\Fluid\ViewHelpers\Widget\PaginateViewHelper.templateRootPaths.10 = EXT:tx_testproviderextension/Resources/Private/Templates/
+	}
+}
+
+lib.myObject = USER
+lib.myObject {
+        userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+        pluginName = Test
+        extensionName = TestProviderExtension
+        vendorName = Test
+        controller = Plugin
+        action = index
+
+        view {
+            templateRootPaths.10 = EXT:tx_testproviderextension/Resources/Private/OtherTemplates/
+        }
+}

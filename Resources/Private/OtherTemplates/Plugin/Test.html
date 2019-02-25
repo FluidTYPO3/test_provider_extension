@@ -1,0 +1,12 @@
+TEST PLUGIN
+
+<f:render partial="MyPartial" />
+
+<f:widget.paginate objects="{users}" as="paginated">
+    <ul>
+        <f:for each="{paginated}" as="user">
+            <li>{user.username}</li>
+        </f:for>
+    </ul>
+</f:widget.paginate>
+

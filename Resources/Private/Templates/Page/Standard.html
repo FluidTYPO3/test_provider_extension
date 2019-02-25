@@ -1,0 +1,60 @@
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+
+<f:layout name="Default" />
+
+<f:section name="Configuration">
+	<flux:form id="standard">
+		<flux:form.option name="static" value="0" />
+	</flux:form>
+	<flux:grid>
+		<flux:grid.row>
+			<flux:grid.column colPos="0" colspan="3" name="main" />
+			<flux:grid.column colPos="1" name="side" />
+		</flux:grid.row>
+	</flux:grid>
+</f:section>
+
+<f:section name="HeaderAssets">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+			integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+			crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</f:section>
+
+<f:section name="Preview">
+</f:section>
+
+<f:section name="Main">
+	<f:variable name="test" value="-1" />
+	First: {test}.
+	<f:variable name="test" value="1" />
+	Then: {test}.
+	<v:variable.set name="test" value="2" />
+	And then: {test}.
+	<v:variable.set name="test" value="3" />
+	And finally: {test}.
+	<a href="/">Home</a>
+	<v:page.languageMenu hideNotTranslated="0" />
+	<v:menu expandAll="1" levels="10" entryLevel="0" />
+	<v:condition.string.contains haystack="foobar" needle="oo">
+		<f:then>YES!</f:then>
+		<f:else>NOOOOO</f:else>
+	</v:condition.string.contains>
+	<v:condition.variable.isset name="page">
+		<f:then>AHA!</f:then>
+		<f:else>NOPES!</f:else>
+	</v:condition.variable.isset>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-12 col-md-8 alert alert-warning">
+				<v:content.render column="0" />
+			</div>
+			<div class="col-sm-12 col-md-4 alert alert-info">
+				<v:content.render column="1" />
+			</div>
+			<v:content.render contentUids="{0: 320}" />
+		</div>
+	</div>
+</f:section>

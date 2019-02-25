@@ -1,0 +1,14 @@
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+
+<f:layout name="Default" />
+
+<f:section name="Configuration">
+  <flux:form id="boomba" options="{group: 'common'}">
+    <flux:field.custom name="test">test</flux:field.custom>
+  </flux:form>
+</f:section>
+
+<f:section name="Main">
+ I AM BOOMBA <f:render partial="MyPartial" />
+</f:section>

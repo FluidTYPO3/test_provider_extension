@@ -1,0 +1,30 @@
+<f:layout name="Default" />
+
+<f:section name="Configuration">
+    <flux:form id="typesandtransform" label="Test: Field types and transforming" description="Test of field types and data transforming" options="{static: 1}">
+        <flux:field.input name="settings.stringAsInteger" default="123a" label="String-to-integer" transform="integer" />
+        <flux:field.input name="settings.stringAsBoolean" default="0" label="String-to-boolean" transform="boolean" />
+        <flux:field.input name="settings.stringAsArray" default="a,b,c" label="String-to-array" transform="array" />
+        <flux:form.section name="settings.sectionObjectAsClass">
+            <flux:form.object name="custom">
+                <flux:field.input name="propertyFoo" default="Foo" label="Property value: Foo" />
+                <flux:field.input name="propertyBar" default="Bar" label="Property value: Bar" />
+            </flux:form.object>
+        </flux:form.section>
+    </flux:form>
+</f:section>
+
+<f:section name="Preview">
+    Demo element showing field types and transformation
+</f:section>
+
+<f:section name="Main">
+    <h2>Data type transformations</h2>
+    <p>Tests: various field types and data transformation</p>
+    <ol>
+        <li>Input field, string transformed to integer: <v:condition.type.isInteger value="{settings.stringAsInteger}" then="SUCCESS - {settings.stringAsInteger}" else="FAILED - {settings.stringAsInteger}" /></li>
+        <li>Input field, string transformed to boolean: <v:condition.type.isBoolean value="{settings.stringAsBoolean}" then="SUCCESS - {settings.stringAsBoolean as integer}" else="FAILED - {settings.stringAsBoolean -> f:debug(inline: 1)}" /></li>
+        <li>Input field, string transformed to array: <v:condition.type.isArray value="{settings.stringAsArray}" then="SUCCESS - {settings.stringAsArray -> v:iterator.implode(glue: '+')}" else="FAILED - {settings.stringAsArray -> f:debug(inline: 1)}" /></li>
+        <li>Input field, string transformed to object, echoed using __toString(): {settings.sectionObjectAsClass -> v:iterator.extract(key: 'custom', single: 1)}</li>
+    </ol>
+</f:section>

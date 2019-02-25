@@ -1,0 +1,29 @@
+{
+    "name": "fluidtypo3/test-provider-extension",
+    "description": "Test provider extension for FluidTYPO3",
+    "type": "typo3-cms-extension",
+    "homepage": "http://fluidtypo3.org",
+    "license": "GPL-2.0+",
+    "preferred-install": "dist",
+    "support": {
+        "irc": "irc://irc.freenode.org/fedext",
+        "issues": "https://github.com/FluidTYPO3/flux/issues"
+    },
+    "autoload": {
+        "psr-4": {
+            "FluidTYPO3\\TestProviderExtension\\": "Classes/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "FluidTYPO3\\TestProviderExtension\\Tests\\": "Tests/"
+        }
+    },
+    "require": {
+        "php": ">=7.0.0",
+        "typo3/cms-core": ">=7.6.13, <7.6.99|^8.4.1|^9|dev-master"
+    },
+    "replace": {
+        "test_provider_extension": "self.version"
+    }
+}

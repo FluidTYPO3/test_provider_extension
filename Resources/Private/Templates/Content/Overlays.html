@@ -1,0 +1,32 @@
+
+<f:layout name="Default" />
+
+<f:section name="Configuration">
+    <flux:form id="overlays" label="Test: Overlay paths" description="Test of overlay template paths" extensionName="FluidTYPO3.TestProviderExtension" />
+</f:section>
+
+<f:section name="Preview">
+    Demo element showing overlay template path usages
+</f:section>
+
+<f:section name="Main">
+
+    {f:render(partial: 'First') -> v:format.trim() -> f:variable(name: 'first')}
+    {f:render(partial: 'Second') -> v:format.trim() -> f:variable(name: 'second')}
+    {f:render(partial: 'Third') -> v:format.trim() -> f:variable(name: 'third')}
+
+    <h2>Overlays</h2>
+    <p>This template contains renderings of three Partial templates:</p>
+    <ol>
+        <li><code>First</code> Which is the default / fallback</li>
+        <li><code>Second</code> Which only exists in the second overlay path for <code>partialRootPaths</code></li>
+        <li><code>Third</code> Which exists in all <code>partialRootPaths</code></li>
+    </ol>
+    <p>The following are tests that the expected output is rendered:</p>
+    <ol>
+        <li><f:if condition="{first} == 'Partials/First'" then="SUCCESS - ({first})" else="FAILURE - ({first})" /></li>
+        <li><f:if condition="{second} == 'OtherPartials/Second'" then="SUCCESS - ({second})" else="FAILURE - ({second})" /></li>
+        <li><f:if condition="{third} == 'ThirdPartials/Third'" then="SUCCESS - ({third})" else="FAILURE - ({third})" /></li>
+    </ol>
+    <flux:content.render area="main" />
+</f:section>

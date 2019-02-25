@@ -1,0 +1,30 @@
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+
+<f:layout name="Default" />
+
+<f:section name="Configuration">
+  <flux:form id="columns" options="{icon: 'EXT:test_provider_extension/Resources/Public/Icons/Content/Columns.svg', Fluidcontent: {hidden: 1}, static: 1}" extensionName="FluidTYPO3.TestProviderExtension">
+    <flux:form.sheet name="options">
+      <flux:field.select name="settings.distribution" required="1" validate="required" items="{0: {0: 'Equal', 1: '6-6'}, 1: {0: 'Third left', 1: '4-8'}, 2: {0: 'Two-thirds left', 1: '8-4'}}" />
+      <flux:field.input name="newfield1" inheritEmpty="0" />
+    </flux:form.sheet>
+  </flux:form>
+  <flux:grid>
+    <flux:grid.row name="row58e95b95423d33.25741513">
+      <flux:grid.column name="left" label="LLL:flux.splitters.columns.left" colspan="" />
+      <flux:grid.column name="right" label="LLL:flux.splitters.columns.right" />
+    </flux:grid.row>
+  </flux:grid>
+  <flux:grid name="grid2">
+    <flux:grid.row name="row58e969f4d6c0b7.24375003">
+      <flux:grid.column name="third" />
+    </flux:grid.row>
+  </flux:grid>
+</f:section>
+
+<f:section name="Main">
+<div class="container-fluid">
+        <f:render partial="TwoColumnGrid" arguments="{sizes: '{settings.distribution -> v:iterator.explode(glue: \'-\')}', record: record}" />
+    </div>
+</f:section>
