@@ -2,14 +2,12 @@
 
 <f:section name="Configuration">
     <flux:form id="customcontroller" options="{static: 1}">
-
         <flux:field.select name="settings.displayType" items="{0: {0: 'normal', 1: 'normal'}}" />
         <flux:field.input name="foobar" exclude="1" inheritEmpty="0" />
-
     </flux:form>
     <flux:grid>
         <flux:grid.row name="row58a024ebb06587.59863932">
-            <flux:grid.column name="main" label="LLL:flux.frames.columns.content" variables="{deniedContentTypes: 'testproviderextension_container'}" colPos="0" />
+            <flux:grid.column name="main" colPos="0" label="LLL:flux.frames.columns.content" variables="{deniedContentTypes: 'testproviderextension_container'}" />
         </flux:grid.row>
     </flux:grid>
 </f:section>

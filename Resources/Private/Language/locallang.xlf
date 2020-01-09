@@ -15,6 +15,12 @@
 			<trans-unit id="flux.standard.description">
 				<source>Description can be entered in LLL file locallang.xlf of extension test</source>
 			</trans-unit>
+			<trans-unit id="flux.second">
+				<source>Example page</source>
+			</trans-unit>
+			<trans-unit id="flux.second.description">
+				<source>Description can be entered in LLL file locallang.xlf of extension test</source>
+			</trans-unit>
 			<trans-unit id="flux.boomba">
 				<source>Boomba</source>
 			</trans-unit>
