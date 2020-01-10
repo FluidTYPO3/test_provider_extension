@@ -2,7 +2,7 @@
 
 <f:section name="Configuration">
     <flux:form id="container">
-        <flux:form.option name="Fluidcontent" value="{hidden: 1}" />
+        <flux:form.option name="Fluidcontent" value="{hidden: 1, static: 1}" />
         <flux:form.option name="icon" value="EXT:test_provider_extension/Resources/Public/Icons/Content/Container.svg" />
         <flux:field.select name="settings.displayType" items="normal" />
         <flux:field.relation name="settings.group" size="10" maxItems="10" multiple="1" table="tt_content" />

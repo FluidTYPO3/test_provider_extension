@@ -4,7 +4,7 @@
 <f:layout name="Default" />
 
 <f:section name="Configuration">
-	<flux:form id="standard">
+	<flux:form id="standard" options="{static: 1}">
 		<flux:form.option name="static" value="0" />
 	</flux:form>
 	<flux:grid>
@@ -27,34 +27,6 @@
 </f:section>
 
 <f:section name="Main">
-	<f:variable name="test" value="-1" />
-	First: {test}.
-	<f:variable name="test" value="1" />
-	Then: {test}.
-	<v:variable.set name="test" value="2" />
-	And then: {test}.
-	<v:variable.set name="test" value="3" />
-	And finally: {test}.
-	<a href="/">Home</a>
-	<v:page.languageMenu hideNotTranslated="0" />
-	<v:menu expandAll="1" levels="10" entryLevel="0" />
-	<v:condition.string.contains haystack="foobar" needle="oo">
-		<f:then>YES!</f:then>
-		<f:else>NOOOOO</f:else>
-	</v:condition.string.contains>
-	<v:condition.variable.isset name="page">
-		<f:then>AHA!</f:then>
-		<f:else>NOPES!</f:else>
-	</v:condition.variable.isset>
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-sm-12 col-md-8 alert alert-warning">
-				<v:content.render column="0" />
-			</div>
-			<div class="col-sm-12 col-md-4 alert alert-info">
-				<v:content.render column="1" />
-			</div>
-			<v:content.render contentUids="{0: 320}" />
-		</div>
-	</div>
+	<f:cObject typoscriptObjectPath="plugin.tx_flux.objects.default_menu" />
+	<f:cObject typoscriptObjectPath="plugin.tx_flux.objects.default_content" />
 </f:section>

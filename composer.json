@@ -20,10 +20,13 @@
         }
     },
     "require": {
-        "php": ">=7.0.0",
-        "typo3/cms-core": ">=7.6.13, <7.6.99|^8.4.1|^9|dev-master"
+        "php": "^7.0.0",
+        "typo3/cms-core": ">=7.6.13, <7.6.99|^8.4.1|^9|^10|dev-master",
+        "fluidtypo3/flux": "*"
     },
-    "replace": {
-        "test_provider_extension": "self.version"
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "test_provider_extension"
+        }
     }
 }

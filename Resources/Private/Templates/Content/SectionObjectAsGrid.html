@@ -1,0 +1,23 @@
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+
+<f:layout name="Default" />
+
+<f:section name="Configuration">
+  <flux:form id="sectionobjectasgrid" options="{icon: 'EXT:test_provider_extension/Resources/Public/Icons/Content/SectionObjectAsGrid.svg', static: 1}" extensionName="FluidTYPO3.TestProviderExtension">
+    <flux:form.sheet name="options">
+      <flux:form.section name="columns" gridMode="rows">
+        <flux:form.object name="column" label="Column" contentContainer="1" />
+      </flux:form.section>
+    </flux:form.sheet>
+  </flux:form>
+</f:section>
+
+<f:section name="Main">
+  <f:render partial="First" arguments="{test: 'foobarbaz'}" />
+  <f:for each="{columns}" as="columnObject">
+    <div class="container-fluid">
+      <flux:content.render area="{columnObject.column.colPos}" />
+    </div>
+  </f:for>
+</f:section>

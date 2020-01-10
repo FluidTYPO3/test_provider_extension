@@ -4,13 +4,13 @@
 <f:layout name="Default" />
 
 <f:section name="Configuration">
-	<flux:form id="standard">
+	<flux:form id="second" options="{static: 1}" label="Other template">
 		<flux:form.option name="static" value="0" />
+		<flux:field.input name="settings.test" label="Test field" />
 	</flux:form>
 	<flux:grid>
 		<flux:grid.row>
-			<flux:grid.column colPos="0" colspan="3" name="main" />
-			<flux:grid.column colPos="1" name="side" />
+			<flux:grid.column colPos="5" colspan="3" name="main" />
 		</flux:grid.row>
 	</flux:grid>
 </f:section>
@@ -27,5 +27,5 @@
 </f:section>
 
 <f:section name="Main">
-	Alternative page template
+	<h1>Second page template</h1>
 </f:section>
