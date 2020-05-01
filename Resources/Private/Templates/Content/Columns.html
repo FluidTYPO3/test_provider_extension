@@ -5,7 +5,8 @@
 
 <f:section name="Configuration">
   <f:variable name="distributions" value="{settings.distribution | v:iterator.explode(glue: '-')}" />
-  <flux:form id="columns" options="{icon: 'EXT:test_provider_extension/Resources/Public/Icons/Content/Columns.svg', Fluidcontent: {hidden: 1}, static: 0}" extensionName="FluidTYPO3.TestProviderExtension">
+  <flux:form id="columns" options="{static: 0}" extensionName="FluidTYPO3.TestProviderExtension">
+    <flux:form.variable name="test" value="test" />
     <flux:form.sheet name="options">
       <flux:field.select name="settings.distribution" required="1" validate="required" items="{0: {0: 'Equal', 1: '6-6'}, 1: {0: 'Third left', 1: '4-8'}, 2: {0: 'Two-thirds left', 1: '8-4'}}" />
       <flux:field.input name="newfield1" />
@@ -26,8 +27,6 @@
 </f:section>
 
 <f:section name="Main">
-  <f:render partial="First" arguments="{test: 'foobarbaz'}" />
-  <f:link.page pageUid="1" data="{foo: {test: 'test'}}">test</f:link.page>
   <div class="container-fluid">
     <f:render partial="TwoColumnGrid" arguments="{sizes: '{settings.distribution -> v:iterator.explode(glue: \'-\')}', record: record}" />
   </div>
