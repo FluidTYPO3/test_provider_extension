@@ -1,0 +1,29 @@
+<f:layout name="Default" />
+
+<f:section name="Configuration">
+  <flux:form id="sectionobjectasmanualgrid" options="{static: 0}" extensionName="FluidTYPO3.TestProviderExtension">
+    <flux:form.sheet name="options">
+      <flux:form.section name="columns">
+        <flux:form.object name="column" label="Column">
+          <flux:form.object.columnPosition />
+        </flux:form.object>
+      </flux:form.section>
+    </flux:form.sheet>
+  </flux:form>
+  <flux:grid>
+    <flux:grid.row>
+      <f:for each="{columns}" as="columnObject">
+        <flux:grid.column colPos="{columnObject.column.colPos}" />
+      </f:for>
+    </flux:grid.row>
+  </flux:grid>
+</f:section>
+
+<f:section name="Main">
+  <f:render partial="First" arguments="{test: 'foobarbaz'}" />
+  <f:for each="{columns}" as="columnObject">
+    <div class="container-fluid">
+      <flux:content.render area="{columnObject.column.colPos}" />
+    </div>
+  </f:for>
+</f:section>

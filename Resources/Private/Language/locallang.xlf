@@ -33,6 +33,12 @@
 			<trans-unit id="flux.sectionobjectasgrid.description">
 				<source>Demonstrates how to use section objects as grid columns</source>
 			</trans-unit>
+			<trans-unit id="flux.sectionobjectasmanualgrid">
+				<source>Section objects as grid (manual structure)</source>
+			</trans-unit>
+			<trans-unit id="flux.sectionobjectasmanualgrid.description">
+				<source>Demonstrates how to use section objects as grid columns combined with a manually defined grid</source>
+			</trans-unit>
 			<trans-unit id="flux.container.fields.settings.displayType">
 				<source>Display type / style</source>
 			</trans-unit>
