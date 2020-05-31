@@ -7,10 +7,11 @@ namespace FluidTYPO3\TestProviderExtension\Controller;
 class PageController extends \FluidTYPO3\Flux\Controller\PageController
 {
     /**
+     * @param string $value
      * @return void
      */
-    public function standardAction()
+    public function standardAction(?string $value = null)
     {
-
+        $this->view->assign('value', $value);
     }
 }
