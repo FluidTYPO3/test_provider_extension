@@ -2,10 +2,14 @@
 
 <f:section name="Configuration">
     <flux:form id="container">
-        <flux:form.option name="Fluidcontent" value="{hidden: 1, static: 1}" />
-        <flux:form.option name="icon" value="EXT:test_provider_extension/Resources/Public/Icons/Content/Container.svg" />
-        <flux:field.select name="settings.displayType" items="normal" />
-        <flux:field.relation name="settings.group" size="10" maxItems="10" multiple="1" table="tt_content" />
+        <flux:form.option name="group" value="test" />
+        <flux:form.sheet name="options" label="Options">
+            <flux:field.select name="settings.displayType" items="normal" />
+            <flux:field.relation name="settings.group" size="10" maxItems="10" multiple="1" table="tt_content" />
+        </flux:form.sheet>
+        <flux:form.sheet name="other" label="Other">
+            <flux:field type="input" name="input" label="Input" />
+        </flux:form.sheet>
     </flux:form>
     <flux:grid>
         <flux:grid.row>

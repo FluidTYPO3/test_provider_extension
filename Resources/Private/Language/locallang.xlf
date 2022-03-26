@@ -21,6 +21,12 @@
 			<trans-unit id="flux.second.description">
 				<source>Description can be entered in LLL file locallang.xlf of extension test</source>
 			</trans-unit>
+			<trans-unit id="flux.emailOutlet">
+				<source>Outlet action</source>
+			</trans-unit>
+			<trans-unit id="flux.emailOutlet.description">
+				<source>Demonstrates how the Outlet feature works</source>
+			</trans-unit>
 			<trans-unit id="flux.container">
 				<source>Content wrap/container</source>
 			</trans-unit>

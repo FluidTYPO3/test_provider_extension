@@ -10,7 +10,7 @@
  * writing. "version" and "dependencies" must not be touched!
  ***************************************************************/
 
-$EM_CONF[$_EXTKEY] = array(
+$EM_CONF['test_provider_extension'] = array(
 	'title' => 'My provider extension',
 	'description' => 'Templates for my site',
 	'category' => 'misc',
