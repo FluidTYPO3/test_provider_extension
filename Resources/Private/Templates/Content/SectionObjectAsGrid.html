@@ -15,7 +15,7 @@
 
 <f:section name="Main">
   <f:render partial="First" arguments="{test: 'foobarbaz'}" />
-  <f:for each="{columns}" as="columnObject">
+  <f:for each="{columns as array}" as="columnObject">
     <div class="container-fluid">
       <flux:content.render area="{columnObject.column.colPos}" />
     </div>

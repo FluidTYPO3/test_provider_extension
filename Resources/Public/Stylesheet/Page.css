@@ -1,0 +1,42 @@
+body {
+    padding: 2em;
+}
+
+#menu {
+    font-weight: bold;
+}
+#breadcrumb {
+    clear: both;
+    min-height: 1em;
+}
+#breadcrumb {
+    clear: both;
+}
+#breadcrumb ul {
+    list-type: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    clear: right;
+    display: block;
+}
+#breadcrumb li {
+    display: inline-block;
+    height: 1em;
+}
+#breadcrumb a {
+    padding: 0.25em 1em;
+}
+#breadcrumb a:hover {
+    background-color: #ddd;
+}
+
+table.fluidtypo3-tests td,
+table.fluidtypo3-tests th {
+    padding: 0.25em;
+    vertical-align: top;
+}
+
+table.fluidtypo3-tests tr.i-0 td {
+    background-color: #f4f4f4;
+}

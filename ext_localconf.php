@@ -1,13 +1,30 @@
 <?php
-defined('TYPO3_MODE') or die ('Access denied.');
+(function() {
+    /*
+    \FluidTYPO3\Flux\Core::registerManuallyManagedContentType('testproviderextension_columns');
+    \FluidTYPO3\Flux\Core::registerManuallyManagedContentType('testproviderextension_container');
+    \FluidTYPO3\Flux\Core::registerManuallyManagedContentType('testproviderextension_overlays');
+    \FluidTYPO3\Flux\Core::registerManuallyManagedContentType('testproviderextension_relationfields');
+    \FluidTYPO3\Flux\Core::registerManuallyManagedContentType('testproviderextension_sectionobjectasgrid');
+    \FluidTYPO3\Flux\Core::registerManuallyManagedContentType('testproviderextension_sectionobjectasmanualgrid');
+    \FluidTYPO3\Flux\Core::registerManuallyManagedContentType('testproviderextension_subtest');
+    \FluidTYPO3\Flux\Core::registerManuallyManagedContentType('testproviderextension_typesandtransform');
+    */
 
-\FluidTYPO3\Flux\Core::registerProviderExtensionKey('FluidTYPO3.TestProviderExtension', 'Page');
-\FluidTYPO3\Flux\Core::registerProviderExtensionKey('FluidTYPO3.TestProviderExtension', 'Content');
+    \FluidTYPO3\Flux\Core::registerProviderExtensionKey('FluidTYPO3.TestProviderExtension', 'Page');
+    \FluidTYPO3\Flux\Core::registerProviderExtensionKey('FluidTYPO3.TestProviderExtension', 'Content');
 
-\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin('FluidTYPO3.TestProviderExtension', 'Test', ['Plugin' => 'test'], ['Plugin' => 'test']);
+    $controllerName = \FluidTYPO3\TestProviderExtension\Controller\PluginController::class;
+    $secondControllerName = \FluidTYPO3\TestProviderExtension\Controller\SecondPluginController::class;
+    $extensionName = 'TestProviderExtension';
 
-$GLOBALS['TYPO3_CONF_VARS']['SYS']['fluid']['paths']['test_provider_extension'] = [
-    'templateRootPaths' => ['EXT:test_provider_extension/Resources/Private/OverrideTemplates'],
-];
-
-$GLOBALS['TYPO3_CONF_VARS']['SYS']['fluid']['atoms']['test'][] = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath('test_provider_extension', 'Resources/Private/Partials');
+    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+        $extensionName,
+        'Test',
+        [
+            $controllerName => 'test,other',
+            $secondControllerName => 'test',
+        ],
+        []
+    );
+})();

@@ -1,0 +1,13 @@
+<f:layout name="Default" />
+
+<f:section name="Configuration">
+    <flux:form id="renderRequest" label="Test: Request Renderer" description="Test of v:render.request" extensionName="FluidTYPO3.TestProviderExtension" options="{static: 1}" />
+</f:section>
+
+<f:section name="Preview">
+    Demo element showing usage of v:request.render
+</f:section>
+
+<f:section name="Main">
+    <v:render.request vendorName="FluidTYPO3" extensionName="TestProviderExtension" controller="SecondPlugin" pluginName="Test" />
+</f:section>

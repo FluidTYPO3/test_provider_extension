@@ -2,9 +2,7 @@
 
 <f:section name="Configuration">
     <flux:form id="relationfields" label="Test: Relation fields" description="Test of relation fields" extensionName="FluidTYPO3.TestProviderExtension" options="{static: 1}">
-        <flux:field.multiRelation table="pages" size="10" maxItems="10" name="relationWithSuggest">
-            <flux:wizard.suggest />
-        </flux:field.multiRelation>
+        <flux:field.multiRelation table="pages" size="10" maxItems="10" name="relationWithSuggest" />
         <flux:field.inline.fal name="falRelation" />
     </flux:form>
 </f:section>

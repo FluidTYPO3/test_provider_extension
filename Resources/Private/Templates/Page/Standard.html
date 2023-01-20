@@ -28,9 +28,29 @@
 </f:section>
 
 <f:section name="Main">
-	<f:cObject typoscriptObjectPath="lib.default_menu" />
-	<f:cObject typoscriptObjectPath="lib.default_content" />
-	<h4>Argument passed to controller</h4>
-	<p><f:link.action action="standard" arguments="{value: 'A value'}">Pass value to controller</f:link.action></p>
-	<p>{value}</p>
+	<v:asset.style path="EXT:test_provider_extension/Resources/Public/Stylesheet/Page.css" />
+
+	<div id="languages">
+		<h2>Languages</h2>
+		<v:page.languageMenu as="languageMenu" flagImageType="png">
+			<f:debug inline="1">{languageMenu}</f:debug>
+		</v:page.languageMenu>
+	</div>
+	<div id="menu">
+		<h2>Menu</h2>
+		<v:page.menu />
+	</div>
+	<div id="breadcrumb">
+		<h3>Breadcrumb</h3>
+		<v:page.breadCrumb />
+	</div>
+	<div id="body">
+		<p><f:link.action action="standard" arguments="{value: 'A value'}">Pass value to controller</f:link.action></p>
+		<f:if condition="{value}">
+			<h4>Argument passed to controller</h4>
+			<p>{value}</p>
+		</f:if>
+
+		<v:content.render column="0" />
+	</div>
 </f:section>

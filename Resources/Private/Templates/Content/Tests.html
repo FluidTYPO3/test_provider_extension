@@ -1,0 +1,43 @@
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+
+<f:layout name="Default" />
+
+<f:section name="Configuration">
+    <flux:form id="tests" options="{static: 0}" extensionName="FluidTYPO3.TestProviderExtension" label="All tests">
+        <flux:field.custom name="test">Special field</flux:field.custom>
+    </flux:form>
+</f:section>
+
+<f:section name="Main">
+    <h2>Tests</h2>
+    <table class="fluidtypo3-tests">
+        <thead>
+            <tr>
+                <th>File</th>
+                <th>Result</th>
+                <th>Output</th>
+                <th>Message</th>
+            </tr>
+        </thead>
+        <tbody>
+            <f:for each="{results}" as="result" iteration="iteration">
+                <tr class="i-{iteration.isEven as integer}">
+                    <td>
+                        {result.file}
+                    </td>
+                    <td>
+                        <f:render partial="TestResult" arguments="{result: result.success}" />
+                    </td>
+                    <td>
+                        {result.output -> f:format.raw()}
+                    </td>
+                    <td>
+                        {result.message}
+                    </td>
+                </tr>
+            </f:for>
+        </tbody>
+    </table>
+
+</f:section>
