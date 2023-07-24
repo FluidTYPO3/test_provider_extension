@@ -10,6 +10,10 @@
 </f:section>
 
 <f:section name="Main">
+
+    <f:render partial="Test" arguments="{test: 'foo--', foo: 1}" />
+    <f:render partial="Test" section="Test" arguments="{another: 'another--'}" />
+
     <h2>Tests</h2>
     <table class="fluidtypo3-tests">
         <thead>

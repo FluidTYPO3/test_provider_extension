@@ -1,0 +1,20 @@
+<f:description>
+    This is test template
+</f:description>
+
+<f:parameter name="test" type="string" required="1" />
+<f:parameter name="other" type="string" />
+
+{test}
+
+<f:section name="Test">
+
+    <f:description>
+        This is a test section.
+    </f:description>
+
+    <f:parameter.mode>strict</f:parameter.mode>
+    <f:parameter name="another" type="string" required="1" />
+    {another}
+
+</f:section>

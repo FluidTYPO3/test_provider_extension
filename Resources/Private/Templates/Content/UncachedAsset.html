@@ -1,0 +1,14 @@
+<f:layout name="Default" />
+
+<f:section name="Configuration">
+    <flux:form id="uncachedAsset" label="Test: Uncached Asset" description="Test of v:style and v:script in uncached context" extensionName="FluidTYPO3.TestProviderExtension" options="{static: 1}" />
+</f:section>
+
+<f:section name="Preview">
+</f:section>
+
+<f:section name="Main">
+    <h2>Uncached asset:</h2>
+    <v:render.uncache partial="UncachedAssets" />
+    <hr />
+</f:section>

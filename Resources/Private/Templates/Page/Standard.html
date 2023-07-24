@@ -28,17 +28,20 @@
 </f:section>
 
 <f:section name="Main">
-	<v:asset.style path="EXT:test_provider_extension/Resources/Public/Stylesheet/Page.css" />
+	<v:asset.style>
+		.test
+	</v:asset.style>
+	<v:asset.style path="EXT:test_provider_extension/Resources/Public/Stylesheet/Page.css" standalone="1" rewrite="0" />
 
 	<div id="languages">
 		<h2>Languages</h2>
 		<v:page.languageMenu as="languageMenu" flagImageType="png">
-			<f:debug inline="1">{languageMenu}</f:debug>
+			LANG
 		</v:page.languageMenu>
 	</div>
 	<div id="menu">
 		<h2>Menu</h2>
-		<v:page.menu />
+		<v:menu />
 	</div>
 	<div id="breadcrumb">
 		<h3>Breadcrumb</h3>
@@ -51,6 +54,6 @@
 			<p>{value}</p>
 		</f:if>
 
-		<v:content.render column="0" />
+		<v:content.render column="0" slide="-1" />
 	</div>
 </f:section>

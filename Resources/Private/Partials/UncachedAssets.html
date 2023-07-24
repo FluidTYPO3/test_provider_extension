@@ -1,0 +1,13 @@
+<div id="horrible-div">
+    Should be red background. Should have margin: 2em;
+</div>
+<v:asset.script>
+setTimeout(function() {
+    document.getElementById('horrible-div').classList.add('horrible-background');
+}, 3000);
+</v:asset.script>
+
+<v:asset.style>
+    #horrible-div <f:format.raw>{</f:format.raw> padding: 2em; }
+    .horrible-background <f:format.raw>{</f:format.raw> background-color: red; }
+</v:asset.style>

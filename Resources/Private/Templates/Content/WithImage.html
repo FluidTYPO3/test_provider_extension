@@ -1,0 +1,16 @@
+<f:layout name="Default" />
+
+<f:section name="Configuration">
+    <flux:form id="withImage" label="Test: With Image" description="Test of v:media.image and related" extensionName="FluidTYPO3.TestProviderExtension" options="{static: 1}">
+        <flux:field.inline.fal name="image" label="Image" transform="filereference" />
+    </flux:form>
+</f:section>
+
+<f:section name="Preview">
+    Demo of various image-related functionality
+</f:section>
+
+<f:section name="Main">
+    <v:media.image src="{image}" alt="test" />
+    <f:image image="{image}" />
+</f:section>

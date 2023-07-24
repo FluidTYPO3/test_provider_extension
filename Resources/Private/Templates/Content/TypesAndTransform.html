@@ -21,7 +21,6 @@
 <f:section name="Main">
     <h2>Data type transformations</h2>
     <p>Tests: various field types and data transformation</p>
-    <f:debug>{settings}</f:debug>
     <ol>
         <li>Input field, string transformed to integer: <v:condition.type.isInteger value="{settings.stringAsInteger}" then="SUCCESS - {settings.stringAsInteger}" else="FAILED - {settings.stringAsInteger}" /></li>
         <li>Input field, string transformed to boolean: <v:condition.type.isBoolean value="{settings.stringAsBoolean}" then="SUCCESS - {settings.stringAsBoolean as integer}" else="FAILED - {settings.stringAsBoolean -> f:debug(inline: 1)}" /></li>
