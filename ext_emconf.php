@@ -34,7 +34,7 @@ $EM_CONF['test_provider_extension'] = array(
 	'CGLcompliance_note' => '',
 	'constraints' => array(
 		'depends' => array(
-			'typo3' => '8.7.0-11.5.99',
+			'typo3' => '8.7.0-13.4.99',
 			'flux' => '',
 			'vhs' => '',
 		),
