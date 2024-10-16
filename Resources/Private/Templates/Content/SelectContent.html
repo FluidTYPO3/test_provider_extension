@@ -1,0 +1,16 @@
+<f:layout name="Default" />
+
+<f:section name="Configuration">
+    <flux:form id="selectContent" label="Test: Select Other Content" description="Test of v:content.render with contentUids argument" extensionName="FluidTYPO3.TestProviderExtension" options="{static: 0}">
+        <flux:field type="group" name="contentUid" label="Content Element" config="{internal_type: 'db', allowed: 'tt_content'}" />
+    </flux:form>
+</f:section>
+
+<f:section name="Preview">
+    Demo of selecting and rendering a second content element.
+    {settings.test}
+</f:section>
+
+<f:section name="Main">
+    <v:content.render contentUids="{0: contentUid}" />
+</f:section>
