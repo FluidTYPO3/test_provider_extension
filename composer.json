@@ -21,9 +21,9 @@
     },
     "require": {
         "php": "^7.4.0 || ^8",
-        "typo3/cms-core": ">=7.6.13, <7.6.99|^8.4.1|^9|^10|^11|^12|^13.4|dev-master",
+        "typo3/cms-core": ">=7.6.13, <7.6.99|^8.4.1|^9|^10|^11|^12|^13.4|dev-main",
         "fluidtypo3/flux": "*",
-        "fluidtypo3/vhs": "^6|dev-development"
+        "fluidtypo3/vhs": "*"
     },
     "extra": {
         "typo3/cms": {
